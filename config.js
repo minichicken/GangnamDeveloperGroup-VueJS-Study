@@ -1,3 +1,5 @@
 module.exports = {
-    mongoUri: 'mongodb://localhost/Gangnam'
+    port: 3000,
+    mongoUri: 'mongodb://localhost/Gangnam',
+    jwtSecret: 'examplejwt'
 }
