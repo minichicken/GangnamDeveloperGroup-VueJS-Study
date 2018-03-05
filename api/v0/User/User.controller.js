@@ -1,6 +1,5 @@
 'use strict';
 const User = require('./User.model');
-const VerifyToken = require('../Auth/VerifyToken');
 
 module.exports = {
     createUser: (req, res, next) => {

@@ -11,8 +11,7 @@ const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const config = require('./config');
 const User = require('./api/v0/User');
-const Auth = require('./api/v0/Auth');
-const Product = require('./api/v0/Product');
+const Board = require('./api/v0/Board');
 const Route = require('./route');
 
 const app = express();
@@ -58,8 +57,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use('/', Route);
 app.use('/api/v0/user', User);
-app.use('/api/v0/product', Product);
-//app.use('/api/v0/auth', Auth);
+app.use('/api/v0/boards', Board);
 app.use((req, res, next) => {
     const err = new Error('Not Found');
     err.status = 404;
