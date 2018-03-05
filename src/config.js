@@ -1,5 +1,4 @@
-module.exports = {
+export default {
     port: 3000,
-    mongoUri: 'mongodb://localhost/Gangnam',
-    jwtSecret: 'examplejwt'
+    mongoUri: 'mongodb://127.0.0.1/GannamVueJS',
 }
