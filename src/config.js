@@ -1,5 +1,5 @@
 module.exports = {
-    port: 5000,
+    port: 3000,
     mongoUri: 'mongodb://localhost/Gangnam',
     jwtSecret: 'examplejwt'
 }
