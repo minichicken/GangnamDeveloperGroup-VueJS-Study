@@ -1,4 +1,13 @@
 import User from './User.model'
+import passport from 'passport'
+
+export function loginUser(req, res, next) {
+    passport.authenticate('local-login', {
+        successRedirect: '/products',
+        failureRedirect: '/',
+        failureFlash: true
+    })
+}
 
 export function createUser(req, res, next) {
     User.create(req.body, (err, user) => {

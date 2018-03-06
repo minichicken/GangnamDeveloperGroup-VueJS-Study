@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon src/app.js --exec babel-node --presets env",
-    "build": "babel ./src -d dist",
+    "build": "rm -rf ./dist && babel ./src -d dist",
     "start": "npm build && node ./dist/app.js"
   },
   "repository": {
@@ -28,7 +28,11 @@
   },
   "homepage": "https://github.com/minichicken/GangnamDeveloperGroup-VueJS-Study#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "helmet": "^3.11.0",

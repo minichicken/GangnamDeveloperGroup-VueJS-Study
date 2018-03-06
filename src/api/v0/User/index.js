@@ -3,6 +3,8 @@ import * as controller from './User.controller'
 
 const router = express.Router()
 
+router.post('/login', controller.loginUser)
+
 router.get('/', controller.findUser)
 
 router.get('/:id', controller.findUserById)
